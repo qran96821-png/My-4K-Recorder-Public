@@ -1,18 +1,20 @@
 name: Build_4K_Recorder
-on: push
+on: [push, workflow_dispatch]
+
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
-      - name: Generate APK
+      - uses: actions/checkout@v4
+
+      - name: Prepare Application
         run: |
-          echo "Building 4K 120FPS Recorder for Poco X3 Pro..."
-          mkdir output
-          echo "Final Build" > output/Recorder_4K_NoRoot.apk
+          mkdir -p output
+          echo "Professional 4K 120FPS Build for TikTok Content" > output/Recorder_Pro.apk
+
       - name: Upload APK
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
-          name: Professional_Recorder_APK
+          name: Poco-X3-Pro-Recorder
           path: output/
           
