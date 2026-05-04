@@ -1,0 +1,15 @@
+<VerticalLayout>
+    <!-- خيار الجودة القصوى -->
+    <TextView text="Resolution: 4K (Ultra HD)" />
+    <Button id="btn_4k" background="#FF0000" /> 
+
+    <!-- خيار الفريمات العالية للجيمنج -->
+    <TextView text="Frame Rate: 120 FPS" />
+    <Slider min="60" max="120" value="120" />
+
+    <!-- زر التحكم في تشبع الألوان -->
+    <TextView text="Color Saturation: +30%" />
+    <Switch id="color_boost" checked="true" />
+    
+    <Button text="START RECORDING" />
+</VerticalLayout>
