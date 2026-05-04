@@ -1,0 +1,16 @@
+name: Build_4K_Recorder
+on: 
+  push:
+    branches: [ "main" ]
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Build APK
+        run: |
+          echo "Compiling 4K 120FPS Screen Recorder..."
+          echo "Setting configuration for vayu device (Non-Root)..."
+          
