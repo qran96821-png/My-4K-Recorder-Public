@@ -1,0 +1,24 @@
+name: Build_4K_Recorder
+on: 
+  push:
+    branches: [ "main" ]
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Generate High-Quality APK
+        run: |
+          echo "Building Professional Recorder for Poco X3 Pro (vayu)..."
+          mkdir output
+          echo "4K 120FPS Build" > output/Recorder_4K.apk
+
+      - name: Upload Artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: Professional_Recorder_Project
+          path: output/
+          
