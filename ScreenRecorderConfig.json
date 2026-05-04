@@ -1,0 +1,12 @@
+{
+  "resolutions": ["1080p", "1440p", "2160p_4K"],
+  "frame_rates": [60, 90, 120],
+  "bitrate_max": "100Mbps",
+  "color_processing": {
+    "saturation": "1.3",
+    "vibrance": "high",
+    "color_space": "DCI-P3"
+  },
+  "audio_fix": "enabled",
+  "device_target": "vayu"
+}
