@@ -1,0 +1,10 @@
+name: Build 4K Recorder
+on: [workflow_dispatch]
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Preparing APK
+        run: echo "Compiling screen recorder for Poco X3 Pro (Non-Root)..."
+        
